@@ -1,36 +1,54 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Button.css"
-import {wali} from './ButtonProps';
+
 
 const Button = () => {
+
+
+    var [value, setValue] = useState("0");
+
+    function getValue(buttonValue){
+      
+        if (value === "0") {
+            setValue(buttonValue);
+          } else {
+            setValue(value + buttonValue);
+          }
+       
+    }
+
     return (
+        
         <div>
+            <div>
+            <input type="text" value={value}/>
+        </div>
            <div className='flex-wrapper'>
-           <ButtonProps content="AC"/>
+            <button>AC</button>
             <button>+-</button>
             <button>%</button>
             <button>/</button>
            </div>
            <div className='flex-wrapper'>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
+            <button onClick={() => getValue("7")}>7</button>
+            <button onClick={() => getValue("8")}>8</button>
+            <button onClick={() => getValue("9")}>9</button>
             <button>x</button>
            </div>
            <div className='flex-wrapper'>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
+            <button onClick={() => getValue("4")}>4</button>
+            <button onClick={() => getValue("5")}>5</button>
+            <button onClick={() => getValue("6")}>6</button>
             <button>-</button>
            </div>
            <div className='flex-wrapper'>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+            <button onClick={() => getValue("1")}>1</button>
+            <button onClick={() => getValue("2")}>2</button>
+            <button onClick={() => getValue("3")}>3</button>
             <button>+</button>
            </div>
            <div className='flex-wrapper'>
-            <button>0</button>
+            <button onClick={() => getValue("0")}>0</button>
             <button>.</button>
             <button>=</button>
            </div>

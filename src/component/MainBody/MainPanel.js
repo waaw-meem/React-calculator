@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainPanel.css"
-import InputField from "../InputField/InputField";
+import InputField from "../Keypads/InputField";
 import Button from "./../Keypads/Button"
 
 const MainPanel = () => {
