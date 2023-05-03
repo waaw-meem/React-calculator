@@ -7,9 +7,9 @@ const MainPanel = () => {
     return(
         <div className="main">
            <div className="flex_wrapper">
-            <div className="input-area">
+            {/* <div className="input-area">
                 <InputField/>
-            </div>
+            </div> */}
             <div className="keypad-area">
                <Button/>
             </div>
